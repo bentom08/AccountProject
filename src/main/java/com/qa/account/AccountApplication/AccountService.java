@@ -5,14 +5,14 @@ import java.util.Map;
 
 public class AccountService implements AccountInterface {
 
-	Map<String, Account> accounts;
+	private Map<String, Account> accounts;
 	
 	public AccountService() {
 		accounts = new HashMap<String, Account>();
 	}
 	
-	public void addAccount(Account account) {
-		accounts.put(account.getAccountNumber(), account);
+	public void addAccount(String firstName, String lastName, String accountNumber) {
+		accounts.put(accountNumber, new Account(firstName, lastName, accountNumber));
 	}
 	
 	public Account retrieveAccount(String accountNumber) {
