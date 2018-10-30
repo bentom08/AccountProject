@@ -6,3 +6,4 @@
 .jar
 .war
 /bin
+sonar-project.properties
