@@ -1,7 +1,8 @@
-/com/
-
-/target/
-*.class
+/.metadata/
 .project
+.settings
 .classpath
-/.settings/
+/target
+.jar
+.war
+/bin
