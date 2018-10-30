@@ -8,7 +8,7 @@ public class AccountService implements AccountInterface {
 	private Map<String, Account> accounts;
 	
 	public AccountService() {
-		accounts = new HashMap<String, Account>();
+		accounts = new HashMap<>();
 	}
 	
 	public void addAccount(String firstName, String lastName, String accountNumber) {
