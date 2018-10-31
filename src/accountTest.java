@@ -6,7 +6,7 @@ import com.qa.account.accountapp.AccountService;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
-public class accountTest extends TestCase {
+public class accountTest {
 
 	@Test
 	public void accountCountTest() {
