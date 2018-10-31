@@ -22,4 +22,9 @@ public class AccountService implements AccountInterface {
 		util = new JSONUtil();
 		return util.getJSONfromObject(accounts.values());
 	}
+	
+	public int countAccounts(String name) {
+		
+		return (int) accounts.values().stream().filter(i -> i.getFirstName().equals(name)).count();
+	}
 }
