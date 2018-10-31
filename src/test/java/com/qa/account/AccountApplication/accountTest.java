@@ -1,3 +1,4 @@
+package com.qa.account.AccountApplication;
 import org.junit.Test;
 
 import com.qa.account.accountapp.Account;
