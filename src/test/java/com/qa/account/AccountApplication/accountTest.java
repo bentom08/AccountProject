@@ -10,9 +10,6 @@ import com.qa.account.accountapp.AccountRepository;
 import com.qa.account.accountapp.AccountRepositoryAlt;
 import com.qa.account.accountapp.AccountService;
 
-import junit.framework.Assert;
-import junit.framework.TestCase;
-
 public class accountTest {
 	
 	Account a1;
