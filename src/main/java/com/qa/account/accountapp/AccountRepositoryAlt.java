@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 
 @Transactional(SUPPORTS)
 @Alternative
-public class AccountRepositoryAlt {
+public class AccountRepositoryAlt implements AccountRepoInterface {
 	
 	private Map<Long, Account> accountMap = new HashMap<>();
 			

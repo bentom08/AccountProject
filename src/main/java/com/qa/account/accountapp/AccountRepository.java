@@ -14,7 +14,7 @@ import javax.transaction.Transactional;
 
 @Transactional(SUPPORTS)
 @Default
-public class AccountRepository {
+public class AccountRepository implements AccountRepoInterface {
 
 
 	@PersistenceContext(unitName = "primary")
