@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import com.qa.account.accountapp.Account;
 import com.qa.account.accountapp.AccountBusiness;
+import com.qa.account.accountapp.AccountRepository;
+import com.qa.account.accountapp.AccountRepositoryAlt;
 import com.qa.account.accountapp.AccountService;
 
 import junit.framework.Assert;
@@ -39,13 +41,14 @@ public class accountTest {
 	
 	@Test
 	public void testBusinessRules() {
-		AccountBusiness rules = new AccountBusiness();
+		AccountBusiness rules = new AccountBusiness(new AccountRepository());
+		AccountBusiness altRules = new AccountBusiness(new AccountRepositoryAlt());
 		String blockedMessage = "{\"message\":\"This account is blocked\"}";
 		String successMessage = "{\"Message\": \"Account Created\"}";
 		
 		assertEquals(successMessage, rules.createAccount(a1));
 		assertEquals(blockedMessage, rules.createAccount(a2));
-		
-		
+		assertEquals(successMessage, altRules.createAccount(a1));
+		assertEquals(blockedMessage, altRules.createAccount(a2));
 	}
 }
