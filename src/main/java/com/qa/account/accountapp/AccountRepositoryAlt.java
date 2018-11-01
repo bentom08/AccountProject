@@ -1,16 +1,16 @@
 package com.qa.account.accountapp;
 
 import static javax.transaction.Transactional.TxType.REQUIRED;
-import static javax.transaction.Transactional.TxType.SUPPORTS;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.enterprise.inject.Alternative;
+import javax.faces.bean.ApplicationScoped;
 import javax.transaction.Transactional;
 
-@Transactional(SUPPORTS)
+@ApplicationScoped
 @Alternative
 public class AccountRepositoryAlt implements AccountRepoInterface {
 	

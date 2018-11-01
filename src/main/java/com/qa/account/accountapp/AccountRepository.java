@@ -6,7 +6,6 @@ import static javax.transaction.Transactional.TxType.SUPPORTS;
 import java.util.List;
 
 import javax.enterprise.inject.Default;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
