@@ -22,6 +22,7 @@ public class AccountService implements AccountInterface {
 	}
 	
 	public int countAccounts(String name) {
+		System.out.println(accounts.values());
 		return (int) accounts.values().stream().filter(i -> i.getFirstName().equals(name)).count();
 	}
 }
